@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         tagsField.heightAnchor.constraint(equalToConstant: 80).isActive = true
 
         tagsField.isScrollEnabled = true
+        tagsField.suggestions = ["Support", "Work", "Help"]
+
         tagsField.cornerRadius = 3.0
         tagsField.spaceBetweenLines = 5.0
         tagsField.spaceBetweenTags = 4.0
@@ -40,7 +42,7 @@ class ViewController: UIViewController {
         tagsField.placeholderColor = .red
         tagsField.placeholderAlwaysVisible = true
         tagsField.backgroundColor = .lightGray
-        tagsField.returnKeyType = .continue
+        tagsField.textField.returnKeyType = .continue
         tagsField.delimiter = ""
 
         tagsField.textDelegate = self
@@ -77,7 +79,7 @@ class ViewController: UIViewController {
         tagsField.isDelimiterVisible = true
         tagsField.borderWidth = 2
         tagsField.borderColor = .blue
-        tagsField.fieldTextColor = .green
+        tagsField.textField.textColor = .green
         tagsField.placeholderColor = .green
         tagsField.placeholderAlwaysVisible = false
         tagsField.font = UIFont.systemFont(ofSize: 9)
