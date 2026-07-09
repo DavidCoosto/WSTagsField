@@ -6,7 +6,7 @@
 //  Copyright © 2016 Whitesmith. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public struct WSTag: Hashable {
 
@@ -23,6 +23,10 @@ public struct WSTag: Hashable {
      public func equals(_ other: WSTag) -> Bool {
          return self.context == other.context
      }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(context)
+    }
 
 }
 
